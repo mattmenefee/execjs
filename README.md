@@ -32,7 +32,7 @@ A longer example, demonstrating how to invoke the CoffeeScript compiler:
 ``` ruby
 require "execjs"
 require "open-uri"
-source = open("http://coffeescript.org/extras/coffee-script.js").read
+source = URI.open("https://coffeescript.org/browser-compiler-modern/coffeescript.js").read
 
 context = ExecJS.compile(source)
 context.call("CoffeeScript.compile", "square = (x) -> x * x", bare: true)
